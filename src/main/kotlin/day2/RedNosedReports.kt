@@ -1,10 +1,10 @@
-package Day2.RedNosedReports
+package day2
 
 import java.io.File
 
 // https://adventofcode.com/2024/day/2
 
-class Solution {
+class RedNosedReports {
     fun openFile(fileName: String): List<List<Int>> {
         val lists = mutableListOf<List<Int>>()
         File(fileName).forEachLine { line ->
@@ -50,11 +50,11 @@ class Solution {
 }
 
 fun main() {
-    val solution = Solution()
-    val input = "src/main/kotlin/Day2/RedNosedReports/input.txt"
-    val lists = solution.openFile(input)
-    val safeReportsCount = solution.countSafeReports(lists)
+    val rnr = RedNosedReports()
+    val input = "src/main/kotlin/Day2/input.txt"
+    val lists = rnr.openFile(input)
+    val safeReportsCount = rnr.countSafeReports(lists)
     println("Count of safe reports: $safeReportsCount")
-    val safeReportsCountWithDampener = solution.countSafeReports(lists, true)
+    val safeReportsCountWithDampener = rnr.countSafeReports(lists, true)
     println("Count of safe reports with dampener: $safeReportsCountWithDampener")
 }

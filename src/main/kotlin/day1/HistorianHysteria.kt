@@ -1,9 +1,9 @@
-package Day1.HistorianHisteria
+package day1
 
 import java.io.File
 import kotlin.math.abs
 
-class Solution {
+class HistorianHysteria {
     fun openFile(fileName: String): Pair<List<Int>, List<Int>> {
         val leftColumn = mutableListOf<Int>()
         val rightColumn = mutableListOf<Int>()
@@ -41,11 +41,11 @@ class Solution {
 }
 
 fun main() {
-    val solution = Solution()
-    val fileName = "src/main/kotlin/Day1/HistorianHisteria/input.txt"
-    val lists = solution.openFile(fileName)
-    val difference = solution.getDifference(lists)
+    val hh = HistorianHysteria()
+    val fileName = "src/main/kotlin/Day1/input.txt"
+    val lists = hh.openFile(fileName)
+    val difference = hh.getDifference(lists)
     println("Difference: $difference")
-    val similarityScore = solution.getSimilarityScore(lists)
+    val similarityScore = hh.getSimilarityScore(lists)
     println("Similarity Score: $similarityScore")
 }
