@@ -1,7 +1,8 @@
 package day6
 
-import java.io.File
+// https://adventofcode.com/2024/day/6
 
+import java.io.File
 
 class GuardGallivant(fileName: String) {
     private val labMap: MutableList<MutableList<Char>>
